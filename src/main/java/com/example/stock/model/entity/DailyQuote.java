@@ -14,19 +14,19 @@ import java.time.LocalDateTime;
 
 /**
  * 日线行情数据实体类
- * 
+ *
  * @author Toom
  * @version 1.0
  */
 @Entity
-@Table(name = "daily_quotes", 
-    uniqueConstraints = {
-        @UniqueConstraint(name = "uk_symbol_date", columnNames = {"symbol", "date"})
-    },
-    indexes = {
-        @Index(name = "idx_daily_quote_symbol", columnList = "symbol"),
-        @Index(name = "idx_daily_quote_date", columnList = "date")
-    }
+@Table(name = "daily_quotes",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "uk_symbol_date", columnNames = {"symbol", "date"})
+        },
+        indexes = {
+                @Index(name = "idx_daily_quote_symbol", columnList = "symbol"),
+                @Index(name = "idx_daily_quote_date", columnList = "date")
+        }
 )
 @EntityListeners(AuditingEntityListener.class)
 @Data
@@ -53,8 +53,8 @@ public class DailyQuote {
      * 关联股票实体（多对一）
      */
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "symbol", referencedColumnName = "symbol", 
-                insertable = false, updatable = false)
+    @JoinColumn(name = "symbol", referencedColumnName = "symbol",
+            insertable = false, updatable = false)
     private Stock stock;
 
     /**

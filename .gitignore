@@ -1,0 +1,12 @@
+# 虚拟环境目录
+venv/
+# 环境变量配置文件
+.env
+# IntelliJ IDEA 配置文件
+.idea/
+# Maven 构建输出目录
+target/
+# Java 编译后的类文件
+*.class
+# aider AI 编程工具相关文件
+.aider*

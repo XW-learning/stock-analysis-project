@@ -13,14 +13,14 @@ import java.time.LocalDateTime;
 
 /**
  * 股票基础信息实体类
- * 
+ *
  * @author Toom
  * @version 1.0
  */
 @Entity
 @Table(name = "stocks", indexes = {
-    @Index(name = "idx_stock_name", columnList = "name"),
-    @Index(name = "idx_stock_sector", columnList = "sector")
+        @Index(name = "idx_stock_name", columnList = "name"),
+        @Index(name = "idx_stock_sector", columnList = "sector")
 })
 @EntityListeners(AuditingEntityListener.class)
 @Data
