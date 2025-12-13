@@ -5,8 +5,8 @@ spring:
   # 数据库配置 - PostgreSQL
   datasource:
     url: jdbc:postgresql://localhost:5432/stock_db
-    username: postgres
-    password: postgres
+    username: stock_user
+    password: stock_password
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
